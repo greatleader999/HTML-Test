@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>나의 첫 웹페이지</title>
+        <style>
+            /* 전체 배경색 및 기본 폰트 설정 */
+            body {
+                font-family: 'Nanum Gothic', sans-serif;
+                background-color: #f9f9f9; /* 밝은 회색 배경 */
+                color: #333;
+                margin: 0;
+                padding: 20px;
+                line-height: 1.6;
+            }
+
+            /* 상단 제목 스타일 */
+            #title1 {
+                color: #ff5722;
+                font-size: 42px;
+                font-weight: bold;
+                text-align: center;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding-bottom: 10px;
+                border-bottom: 2px solid #ff7043;
+            }
+
+            /* 부제목 스타일 */
+            h4 {
+                text-align: center;
+                font-size: 22px;
+                color: #00796b;
+                margin-bottom: 40px;
+            }
+
+            /* 단락 기본 스타일 */
+            p {
+                padding: 10px;
+                background-color: #fff;
+                color: #333;
+                margin: 10px 0;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            /* 링크 스타일 */
+            a {
+                color: #00796b;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            a:hover {
+                text-decoration: underline;
+                color: #004d40;
+            }
+
+            /* 이미지 스타일 */
+            .image-viewer {
+                display: flex;
+                justify-content: space-between;
+                gap: 10px; /* 이미지 간격 */
+            }
+
+            .image-viewer img {
+                width: calc(33.33% - 10px);
+                border-radius: 12px;
+                border: 1px solid #ccc;
+                height: auto;
+            }
+
+            /* 이미지 및 비디오 출처 텍스트 */
+            .source {
+                text-align: center;
+                font-size: 14px;
+                color: #888;
+                margin-top: 10px;
+            }
+
+            /* 비디오 스타일 */
+            video {
+                display: block;
+                margin: 30px auto;
+                max-width: 100%;
+                height: auto;
+                border-radius: 12px;
+                border: 1px solid #333;
+            }
+
+            /* 오디오 스타일 */
+            audio {
+                display: block;
+                margin: 20px auto;
+                max-width: 100%;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="title1">나의 첫 웹 페이지</h1>
+        <h4>HTML의 기본 내용을 실습해 봅니다</h4>
+
+        <!-- 단락 1: 이미지 뷰어 -->
+        <div class="ptags">
+            <p>이미지 뷰어</p>
+            <div class="image-viewer">
+                <img src="img01.jpg" alt="가을 이미지" title="가을 이미지">
+                <img src="img02.jpg" alt="삼성 노트북 수리" title="삼성 노트북 수리">
+                <img src="img03.jpg" alt="화산" title="화산">
+            </div>
+            <p class="source">사진 출처: <a href="https://unsplash.com">Unsplash</a></p>
+        </div>
+
+        <!-- 단락 2: 동영상 뷰어 -->
+        <div class="ptags">
+            <p>동영상 뷰어</p>
+            <video controls>
+                <source src="mov_bbb.mp4" type="video/mp4">
+                <source src="mov_bbb.ogg" type="video/ogg">
+                Your browser does not support HTML video.
+            </video>
+            <p class="source">Video courtesy of <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+        </div>
+
+        <!-- 단락 3: 오디오 청취 -->
+        <div class="ptags">
+            <p>오디오 청취</p>
+            <audio controls>
+                <source src="horse.ogg" type="audio/ogg">
+                <source src="horse.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+              </audio>
+            <p class="source">오디오 출처: Big Buck Bunny OST</p>
+        </div>
+
+    </body>
+</html>
